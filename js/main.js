@@ -18,6 +18,42 @@ if (pariDispari === "pari" || pariDispari === "dispari") {
    const errorPariDispari = alert("l'inserimento é errato ricarica la pagina");
 }
 
+let numeroUtente = prompt("inserisci un numero da 1 a 5");
+//controlliamo che l'utente abbia inserito dei numeri validi
+if (numeroUtente <= 0){
+    alert("ricarica la pagina ed inserisci un numero che va da 1 a 5");
+} else if (numeroUtente > 5) {
+    alert ("ricarica la pagina ed inserisci un numero che va da 1 a 5");
+} else {
+    console.log("il numero scelto é", numeroUtente );
+}
+
+const numberRandom = Math.round(Math.random()* 6);
+console.log(numberRandom);
+
+function getPariDispari (numeroUtente , numberRandom) {
+
+    let numeroFinale = numeroUtente + numberRandom;
+    
+
+    if (numeroFinale % 2 === 0) {
+        let pari = "pari"
+        if (pari === pariDispari){
+            console.log("pari ha vinto l'utente");
+        } else {
+            console.log( "ha vinto il PC");
+        }
+    } else {
+        let dispari = "dispari"
+        if (dispari === pariDispari){
+            console.log( "dispari ha vinto l'utente");
+        } else {
+            console.log( "ha vinto il pc");
+        }
+    }
+}
+
+
 
 
 
