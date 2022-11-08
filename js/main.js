@@ -43,7 +43,8 @@ function getPariDispari (numeroUtente , numberRandom) {
     return numeroFinale
 }
 
-// una funzione che prende il risultato e ti restituisce sotto forma di stringa se è "pari" o "dispari"
+// una funzione che prende il risultato e ti restituisce
+// sotto forma di stringa se è "pari" o "dispari"
 
 
 //  per far uscire numero finale devo creare un altra variabile
