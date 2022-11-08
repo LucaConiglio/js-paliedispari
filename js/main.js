@@ -15,10 +15,16 @@ if (pariDispari === "pari" || pariDispari === "dispari") {
     console.log(`la tua scelta é stata salvata ed é ${pariDispari} `);
 } else if ( pariDispari !== "pari" || pariDispari !== "dispari") {
     
-   const errorPariDispari = alert("l'inserimento é errato ricarica la pagina");
+   alert("l'inserimento é errato ricarica la pagina");
 }
 
 let numeroUtente = prompt("inserisci un numero da 1 a 5");
+
+
+numeroUtente = parseInt(numeroUtente);
+
+
+
 //controlliamo che l'utente abbia inserito dei numeri validi
 if (numeroUtente <= 0){
     alert("ricarica la pagina ed inserisci un numero che va da 1 a 5");
@@ -27,33 +33,40 @@ if (numeroUtente <= 0){
 } else {
     console.log("il numero scelto é", numeroUtente );
 }
-
+//generiamo un numero random da 1 a 5
 const numberRandom = Math.round(Math.random()* 6);
 console.log(numberRandom);
 
 function getPariDispari (numeroUtente , numberRandom) {
 
     let numeroFinale = numeroUtente + numberRandom;
-    
-
-    if (numeroFinale % 2 === 0) {
-        let pari = "pari"
-        if (pari === pariDispari){
-            console.log("pari ha vinto l'utente");
-        } else {
-            console.log( "ha vinto il PC");
-        }
-    } else {
-        let dispari = "dispari"
-        if (dispari === pariDispari){
-            console.log( "dispari ha vinto l'utente");
-        } else {
-            console.log( "ha vinto il pc");
-        }
-    }
+    return numeroFinale
 }
 
+// una funzione che prende il risultato e ti restituisce sotto forma di stringa se è "pari" o "dispari"
 
+
+//  per far uscire numero finale devo creare un altra variabile
+// prendendo il nome della funzione ( valore 1 , valore 2 )
+
+const risultato = getPariDispari(numeroUtente, numberRandom);
+console.log("risultato " ,risultato);
+
+if (risultato % 2 === 0) {
+    let pari = "pari";
+    if (pari === pariDispari){
+        console.log("pari ha vinto l'utente");
+    } else {
+        console.log( "ha vinto il PC");
+    }
+} else {
+    let dispari = "dispari"
+    if (dispari === pariDispari){
+        console.log( "dispari ha vinto l'utente");
+    } else {
+        console.log( "ha vinto il pc");
+    }
+}
 
 
 
